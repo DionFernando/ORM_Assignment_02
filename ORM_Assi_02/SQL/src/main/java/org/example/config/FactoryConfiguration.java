@@ -1,7 +1,7 @@
 package org.example.config;
 
-import org.example.entity.Address;
-import org.example.entity.Customer;
+import org.example.entity.Author;
+import org.example.entity.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,7 +13,7 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
 
     private FactoryConfiguration(){
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Address.class).addAnnotatedClass(Customer.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Author.class).addAnnotatedClass(Book.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 
